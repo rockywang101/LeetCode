@@ -22,7 +22,7 @@ import java.util.Deque;
  * @author rocky.wang
  *
  */
-public class A002_AddTwoNumbers {
+public class A0002_AddTwoNumbers {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         
@@ -141,12 +141,12 @@ public class A002_AddTwoNumbers {
 
         ListNode l1 = stringToListNode("[9]");
         ListNode l2 = stringToListNode("[1,9,9,9,9,9,9,9,9,9]");
-        ListNode ret = new A002_AddTwoNumbers().addTwoNumbers(l1, l2);
+        ListNode ret = new A0002_AddTwoNumbers().addTwoNumbers(l1, l2);
         System.out.println(listNodeToString(ret));
 
         l1 = stringToListNode("[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]");
         l2 = stringToListNode("[5,6,4]");
-        ret = new A002_AddTwoNumbers().addTwoNumbers(l1, l2);
+        ret = new A0002_AddTwoNumbers().addTwoNumbers(l1, l2);
         System.out.println(listNodeToString(ret));
         
     }

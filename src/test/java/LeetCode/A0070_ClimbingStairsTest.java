@@ -4,12 +4,12 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class ClimbingStairsTest {
+public class A0070_ClimbingStairsTest {
 
     @Test
     public void testClimbStairs() {
         
-        ClimbingStairs obj = new ClimbingStairs();
+        A0070_ClimbingStairs obj = new A0070_ClimbingStairs();
         
         assertEquals(obj.climbStairs(1), 1);
         assertEquals(obj.climbStairs(2), 2);

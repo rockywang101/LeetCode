@@ -6,7 +6,7 @@ package LeetCode;
  * 
  * @author rocky.wang
  */
-public class A002_AddTwoNumbersV2 {
+public class A0002_AddTwoNumbersV2 {
 
 	// Runtime: 2 ms, faster than 81.53% of Java online submissions for Add Two Numbers.
 	// Memory Usage: 44 MB, less than 87.15% of Java online submissions for Add Two Numbers.
@@ -40,6 +40,9 @@ public class A002_AddTwoNumbersV2 {
 		ListNode next;
 		ListNode(int x) { val = x; }
 	}
+	
+	
+	
 	
 	
 	// ***********************************************************
@@ -93,17 +96,17 @@ public class A002_AddTwoNumbersV2 {
 
         ListNode l1 = stringToListNode("[9]");
         ListNode l2 = stringToListNode("[1,9,9,9,9,9,9,9,9,9]");
-        ListNode ret = new A002_AddTwoNumbersV2().addTwoNumbers(l1, l2);
+        ListNode ret = new A0002_AddTwoNumbersV2().addTwoNumbers(l1, l2);
         System.out.println(listNodeToString(ret));
 
         l1 = stringToListNode("[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]");
         l2 = stringToListNode("[5,6,4]");
-        ret = new A002_AddTwoNumbersV2().addTwoNumbers(l1, l2);
+        ret = new A0002_AddTwoNumbersV2().addTwoNumbers(l1, l2);
         System.out.println(listNodeToString(ret));
 
         l1 = stringToListNode("[5]");
         l2 = stringToListNode("[5]");
-        ret = new A002_AddTwoNumbersV2().addTwoNumbers(l1, l2);
+        ret = new A0002_AddTwoNumbersV2().addTwoNumbers(l1, l2);
         System.out.println(listNodeToString(ret));
         
     }

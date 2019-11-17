@@ -5,18 +5,20 @@ public class A0007_ReverseInteger {
 
 	// Runtime: 1 ms, faster than 100.00% of Java online submissions for Reverse Integer.
 	// Memory Usage: 33.7 MB, less than 11.66% of Java online submissions for Reverse Integer.
-    public int reverse(int x) {
-        
+	public int reverse(int x) {
+    	int maxDivide10 = Integer.MAX_VALUE / 10;
+		int minDivide10 = Integer.MIN_VALUE / 10;
+
 		int ret = 0;
 		while (x != 0) {
-			int pop = x % 10; // 取尾數
+			int pop = x % 10; // 取出尾數
 			x = x / 10;
 			
 			ret = ret * 10 + pop;
-			if (x > 0 && ret > Integer.MAX_VALUE / 10) {
+			if (x > 0 && ret > maxDivide10) {
 				return 0;
 			}
-			else if (x < 0 && ret < Integer.MIN_VALUE / 10) {
+			else if (x < 0 && ret < minDivide10) {
 				return 0;
 			}
 		}
@@ -36,7 +38,7 @@ public class A0007_ReverseInteger {
 			x = x / 10;
 			
 			ret = ret * 10 + pop;
-			System.out.println(x + "\tpop:\t" + pop + "\tret:\t" + ret);
+			System.out.println(x + "    pop:    " + pop + "    ret:    " + ret);
 			
 			if (x > 0 && ret > Integer.MAX_VALUE / 10) {
 				System.out.println("ret " + ret + " is over, return 0");

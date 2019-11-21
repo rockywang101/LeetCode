@@ -12,7 +12,7 @@ public class Sort01 {
 		int[] nums = new int[30000000];
 		int num = 0;
 		for (int i = 0; i < nums.length; i++) {
-			int n = random.nextInt(2) + 1; // 1 ~ 3
+			int n = random.nextInt(2) + 1;
 			num = num + n;
 			nums[i] = num;
 		}

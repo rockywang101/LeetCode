@@ -1,13 +1,12 @@
 package LeetCode;
 
-import java.util.Arrays;
 
 public class A0035_SearchInsertPosition {
 
 	
 	/**
-	 * 
      * 可參考 Arrays.binarySearch(nums, target);
+     * 
 	 * @param nums
 	 * @param target
 	 * @return

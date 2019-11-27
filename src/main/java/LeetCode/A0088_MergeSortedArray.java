@@ -12,16 +12,17 @@ public class A0088_MergeSortedArray {
         int i = 0, j = 0, k = 0;
         int[] tmp = new int[m+n];
         
+        // 直到 nums1 與 nums2 的值都被取出了才結束
         while (i < m || j < n) {
-            // 代表 nums1 已經沒了
+            // 代表 nums1 取完了
             if (i == m) {
                 tmp[k++] = nums2[j++];
             }
-            // 代表 nums2 已經沒了
+            // 代表 nums2 取完了
             else if (j == n) {
                 tmp[k++] = nums1[i++];
             }
-            // 看 nums1 與 nums2 哪個比較小就先取出
+            // 看 nums1 與 nums2 哪個比較小就取出
             else {
                 tmp[k++] = nums1[i] < nums2[j] ? nums1[i++] : nums2[j++];
             }

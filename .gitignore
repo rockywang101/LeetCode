@@ -5,6 +5,9 @@
 build
 
 bin
+<<<<<<< HEAD
 
 .settings
 .classpath
+=======
+>>>>>>> branch 'master' of https://github.com/rockywang101/LeetCode.git

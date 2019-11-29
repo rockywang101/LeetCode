@@ -12,7 +12,7 @@ public class SortCompare {
 		
 	    int[] nums = createNums(numsLength);
 
-	    for (int i=0; i<10; i++) {
+	    for (int i=0; i<30; i++) {
 	        doSearch(nums);
 	    }
 	    
@@ -53,13 +53,13 @@ public class SortCompare {
         position = Arrays.binarySearch(nums, wantNum);
         diffTime = System.currentTimeMillis() - beginTime;
         // 查看結果
-        System.out.println("find at position " + position + ", spent time " + diffTime);
+        System.out.println("binary search, find at position " + position + ", spent time " + diffTime);
         
         // linearSearch 查找的邏輯
         beginTime = System.currentTimeMillis();
         position = findNum(nums, wantNum);
         diffTime = System.currentTimeMillis() - beginTime;
-        System.out.println("find at position " + position + ", spent time " + diffTime);
+        System.out.println("linear search, find at position " + position + ", spent time " + diffTime);
         
         System.out.println();
     }

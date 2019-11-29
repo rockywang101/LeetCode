@@ -15,6 +15,9 @@ public class SortCompare {
 	    for (int i=0; i<10; i++) {
 	        doSearch(nums);
 	    }
+	    
+	    int times = (int) (Math.log10(numsLength)/Math.log10(2));
+	    System.out.println("log2("+numsLength+") = " + times + " times");
 	}
 	
 	

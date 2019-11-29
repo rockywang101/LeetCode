@@ -1,5 +1,6 @@
 package LeetCode;
 
+import java.util.Arrays;
 
 public class A0035_SearchInsertPosition {
 
@@ -47,6 +48,12 @@ public class A0035_SearchInsertPosition {
     	}
     	
     	return nums.length;
+    }
+    
+    
+    public static void main(String[] args) {
+        int pos = Arrays.binarySearch(new int[] {1, 3, 5, 7, 9, 10} , 7);
+        System.out.println(pos);
     }
     
 }

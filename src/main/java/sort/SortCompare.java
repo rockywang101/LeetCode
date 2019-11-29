@@ -5,6 +5,7 @@ import java.util.Random;
 
 
 public class SortCompare {
+    
 
 	public static void main(String[] args) {
 	    
@@ -13,7 +14,12 @@ public class SortCompare {
 	    int[] nums = createNums(numsLength);
 
 	    for (int i=0; i<30; i++) {
-	        doSearch(nums);
+	        
+	        int wantIndex = new Random().nextInt(nums.length);
+	        int target = nums[wantIndex];
+	        System.out.println("find num: " + target);
+	        
+	        doSearch(nums, target);
 	    }
 	    
 	    int times = (int) (Math.log10(numsLength)/Math.log10(2));
@@ -39,10 +45,7 @@ public class SortCompare {
 	}
 	
 	
-    private static void doSearch(int[] nums) {
-        int wantIndex = new Random().nextInt(nums.length);
-        int wantNum = nums[wantIndex];
-        System.out.println("find num: " + wantNum);
+    private static void doSearch(int[] nums, int target) {
         
         long beginTime;
         long diffTime;
@@ -50,14 +53,14 @@ public class SortCompare {
         
         // binarySearch 查找
         beginTime = System.currentTimeMillis();
-        position = Arrays.binarySearch(nums, wantNum);
+        position = Arrays.binarySearch(nums, target);
         diffTime = System.currentTimeMillis() - beginTime;
         // 查看結果
         System.out.println("binary search, find at position " + position + ", spent time " + diffTime);
         
         // linearSearch 查找的邏輯
         beginTime = System.currentTimeMillis();
-        position = findNum(nums, wantNum);
+        position = searchInsert(nums, target);
         diffTime = System.currentTimeMillis() - beginTime;
         System.out.println("linear search, find at position " + position + ", spent time " + diffTime);
         
@@ -69,19 +72,18 @@ public class SortCompare {
      * linear search
      * 
      * @param nums
-     * @param wantNum
+     * @param target
      * @return
      */
-	private static int findNum(int[] nums, int wantNum) {
-		// 找出是否存在
-		int position = -1;
-		for (int i = 0; i < nums.length; i++) {
-			if (nums[i] == wantNum) {
-				position = i;
-				break;
-			}
-		}		
-		return position;
-	}
-	
+    private static int searchInsert(int[] nums, int target) {
+        // 找出是否存在
+        int position = -1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == target) {
+                position = i;
+                break;
+            }
+        }       
+        return position;
+    }
 }

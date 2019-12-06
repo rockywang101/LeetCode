@@ -1,3 +1,4 @@
+package LeetCode;
 /**
  * Linked List 基本練習題
  * 

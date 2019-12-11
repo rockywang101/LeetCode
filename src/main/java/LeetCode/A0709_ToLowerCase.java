@@ -6,7 +6,7 @@ package LeetCode;
  * https://leetcode.com/problems/to-lower-case/
  * @author rocky
  */
-public class A0709ToLowerCase {
+public class A0709_ToLowerCase {
 	
 	// Runtime: 0 ms, faster than 100.00% of Java online submissions for To Lower Case.
 	// Memory Usage: 33.8 MB, less than 98.70% of Java online submissions for To Lower Case.
@@ -23,7 +23,7 @@ public class A0709ToLowerCase {
     }
     
     public static void main(String[] args) {
-		String str = new A0709ToLowerCase().toLowerCase("ABC");
+		String str = new A0709_ToLowerCase().toLowerCase("ABC");
 		System.out.println(str);
 	}
 }

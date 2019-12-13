@@ -73,13 +73,4 @@ public class A0021_MergeTwoSortedLists2 {
         return rtnList;    
     }
     
-    
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 }

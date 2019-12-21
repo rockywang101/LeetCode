@@ -9,22 +9,38 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 public class A0112_PathSum {
 
+    // 看了別人的答案，更簡潔的寫法
+    // Runtime: 0 ms, faster than 100.00% of Java online submissions for Path Sum.
+    // Memory Usage: 37.3 MB, less than 100.00% of Java online submissions for Path Sum.
+    public boolean hasPathSum(TreeNode root, int sum) {
+        
+        if (root == null) return false;
+        
+        sum = sum - root.val;
+        
+        if (root.left == null && root.right == null && sum == 0)
+            return true;
+
+        return hasPathSum(root.left, sum) || hasPathSum(root.right, sum);
+    }
+    
+    
     // Runtime: 0 ms, faster than 100.00% of Java online submissions for Path Sum.
     // Memory Usage: 37.2 MB, less than 100.00% of Java online submissions for Path Sum.
-    public boolean hasPathSum(TreeNode root, int sum) {
+    public boolean hasPathSumV1(TreeNode root, int sum) {
         
         if (root == null)
             return false;
         
         AtomicBoolean hasPathSum = new AtomicBoolean(false);
         
-        hasPathSum(root, 0, sum, hasPathSum);
+        visitNode(root, 0, sum, hasPathSum);
         
         return hasPathSum.get();
     }
     
     
-    private void hasPathSum(TreeNode node, int currSum, int targetSum, AtomicBoolean hasPathSum) {
+    private void visitNode(TreeNode node, int currSum, int targetSum, AtomicBoolean hasPathSum) {
 
         if (hasPathSum.get())
             return;
@@ -35,9 +51,9 @@ public class A0112_PathSum {
         }
         
         if (node.left != null)
-            hasPathSum(node.left, currSum+node.val, targetSum, hasPathSum);
+            visitNode(node.left, currSum+node.val, targetSum, hasPathSum);
 
         if (node.right != null)
-            hasPathSum(node.right, currSum+node.val, targetSum, hasPathSum);
+            visitNode(node.right, currSum+node.val, targetSum, hasPathSum);
     }
 }

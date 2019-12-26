@@ -23,20 +23,4 @@ public class A0100_SameTree {
         
         return isSameTree(p.right, q.right) && isSameTree(p.left, q.left); 
     }
-
-    
-    public boolean isSameTreeWhileVersion(TreeNode p, TreeNode q) {
-        
-        while (p != null && q != null) {
-            
-            if (p == null || q == null)
-                return false;
-            
-            if (p.val != q.val)
-                return false;
-            
-        }
-        
-        return true; // finally p and q are all null and no different
-    }
 }

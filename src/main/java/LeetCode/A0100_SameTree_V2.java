@@ -22,7 +22,7 @@ public class A0100_SameTree_V2 {
         queue1.add(p);
         queue2.add(q);
         
-        while (queue1.size() > 0 || queue2.size() > 0) {
+        while (! queue1.isEmpty() || ! queue2.isEmpty()) {
        
             for (int i=0; i<queue1.size(); i++) {
                 TreeNode node1 = queue1.remove();

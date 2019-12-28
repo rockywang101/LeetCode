@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * https://leetcode.com/problems/next-greater-element-i/
  * 
- * 雖然解了大數，效能卻比 V2 差了，由此應可推論，在產生一
+ * 雖然解了大數，效能卻比 V2 差了
  * 
  * Runtime: 2 ms, faster than 97.21% of Java online submissions for Next Greater Element I.
  * Memory Usage: 37.3 MB, less than 100.00% of Java online submissions for Next Greater Element I.

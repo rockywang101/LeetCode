@@ -27,8 +27,9 @@ public class A0107_BinaryTreeLevelOrderTraversal_II {
     
     private void visitNode(TreeNode node, int level, List<List<Integer>> rtnList) {
 
+        // 若還沒新增過該層的 list，size 會相同，比如第 0 層時，一開始 size 也是 0，新增過後 size 變 1
         if (rtnList.size() == level)
-            rtnList.add(0, new ArrayList<Integer>());
+            rtnList.add(0, new ArrayList<Integer>()); // 從開頭的位置 insert 進去
         
         rtnList.get(rtnList.size()-level-1).add(node.val);
         

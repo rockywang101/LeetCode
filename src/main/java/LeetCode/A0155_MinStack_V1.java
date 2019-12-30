@@ -5,12 +5,15 @@ import java.util.Stack;
 /**
  * https://leetcode.com/problems/min-stack/
  * 
+ * using java stack to extend function
+ * 
+ * Runtime: 5 ms, faster than 80.25% of Java online submissions for Min Stack.
+ * Memory Usage: 40.1 MB, less than 31.16% of Java online submissions for Min Stack.
+ * 
  * @author rocky
  */
-public class A0155_MinStack {
+public class A0155_MinStack_V1 {
     
-    // Runtime: 5 ms, faster than 80.25% of Java online submissions for Min Stack.
-    // Memory Usage: 40.1 MB, less than 31.16% of Java online submissions for Min Stack.
     class Item {
         int val;
         int min;
@@ -23,7 +26,7 @@ public class A0155_MinStack {
     
     Stack<Item> stack;
     
-    public A0155_MinStack() {
+    public A0155_MinStack_V1() {
         stack = new Stack<Item>();
     }
     

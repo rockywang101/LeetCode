@@ -8,6 +8,9 @@ import java.util.List;
  * 
  * Runtime: 0 ms, faster than 100.00% of Java online submissions for Binary Tree Zigzag Level Order Traversal.
  * Memory Usage: 36 MB, less than 99.04% of Java online submissions for Binary Tree Zigzag Level Order Traversal.
+ * 
+ * same with A0102, just control level and decide add item into first or last
+ * 
  * @author rocky
  */
 public class A0103_BinaryTreeZigzagLevelOrderTraversal {

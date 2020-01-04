@@ -2,7 +2,7 @@ package LeetCode;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class A0437_PathSumIII {
+public class A0437_PathSumIII_V1 {
     
     // 我以為是完美的寫法，結果效能爆炸 >"<
     // Runtime: 22 ms, faster than 8.11% of Java online submissions for Path Sum III.

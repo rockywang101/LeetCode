@@ -15,7 +15,7 @@ package LeetCode;
  * 
  * @author rocky
  */
-public class A0100_BalancedBinaryTree {
+public class A0110_BalancedBinaryTree {
 
     public boolean isBalanced(TreeNode root) {
     

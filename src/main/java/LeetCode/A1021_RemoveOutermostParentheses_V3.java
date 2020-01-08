@@ -5,12 +5,12 @@ package LeetCode;
  * 
  * use counter to solve this problem
  * 
- * Runtime: 2 ms, faster than 96.79% of Java online submissions for Remove Outermost Parentheses.
- * Memory Usage: 35.8 MB, less than 100.00% of Java online submissions for Remove Outermost Parentheses.
+ * Runtime: 1 ms, faster than 100.00% of Java online submissions for Remove Outermost Parentheses.
+ * Memory Usage: 38 MB, less than 15.58% of Java online submissions for Remove Outermost Parentheses.
  * 
  * @author rocky
  */
-public class A1021_RemoveOutermostParentheses_V2 {
+public class A1021_RemoveOutermostParentheses_V3 {
     /* test case
     "(()())(())"
     "(()())(())(()(()))"
@@ -26,14 +26,7 @@ public class A1021_RemoveOutermostParentheses_V2 {
                 if (count++ != 0)
                     sb.append(c);
             }
-            else if (c == ')') {
-                if (--count > 0)
-                    sb.append(c);
-                
-                if (count < 0)
-                    count = 0;
-            }
-            else {
+            else if (--count > 0) {
                 sb.append(c);
             }
         }

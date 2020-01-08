@@ -11,6 +11,8 @@ import java.util.Stack;
  * @author rocky
  */
 public class A1021_RemoveOutermostParentheses_V1 {
+    
+    // "()(AAA)()" will get "AAA", but Expected is "", i don't understand why is ""
 
     public String removeOuterParentheses(String S) {
      

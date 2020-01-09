@@ -3,7 +3,7 @@ package LeetCode;
 /**
  * https://leetcode.com/problems/next-greater-node-in-linked-list/
  * 
- * 網路上的 solution，我還不懂原理是什麼
+ * solution form network
  * 
  * Runtime: 3 ms, faster than 100.00% of Java online submissions for Next Greater Node In Linked List.
  * Memory Usage: 39.9 MB, less than 97.30% of Java online submissions for Next Greater Node In Linked List.

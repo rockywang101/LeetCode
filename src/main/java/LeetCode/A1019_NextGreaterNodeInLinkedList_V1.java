@@ -9,7 +9,7 @@ import java.util.Stack;
  * Memory Usage: 40.7 MB, less than 97.30% of Java online submissions for Next Greater Node In Linked List. 
  * @author rocky
  */
-public class A1019_NextGreaterNodeInLinkedList {
+public class A1019_NextGreaterNodeInLinkedList_V1 {
     
     public int[] nextLargerNodes(ListNode head) {
     

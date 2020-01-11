@@ -5,7 +5,7 @@ package LeetCode;
  *  
  * @author rocky
  */
-public class A0027_RemoveElement {
+public class A0027_RemoveElement_V1 {
 
     // 一樣的版本，只是移除 System.out.println，這題有趣在要小心處理一些特別的 case，錯了兩次都是沒注意到
     // Runtime: 0 ms, faster than 100.00% of Java online submissions for Remove Element.
@@ -67,7 +67,7 @@ public class A0027_RemoveElement {
     }
     
     public static void main(String[] args) {
-        A0027_RemoveElement obj = new A0027_RemoveElement();
+        A0027_RemoveElement_V1 obj = new A0027_RemoveElement_V1();
         System.out.println(obj.removeElement(new int[] {2}, 9));
         System.out.println(obj.removeElement(new int[] {9}, 9));
     }

@@ -14,10 +14,6 @@ package LeetCode;
  */
 public class A1019_NextGreaterNodeInLinkedList_V4 {
     
-    /**
-     * @param head
-     * @return
-     */
     public int[] nextLargerNodes(ListNode head) {
 
         ListNode curr = head;

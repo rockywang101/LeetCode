@@ -9,7 +9,7 @@ package LeetCode;
  */
 public class A0225_ImplementStackUsingQueues {
 
-    // 就用了 ListNode (Queue) 實作了一個簡單的 Stack 行為
+    // 就是用 ListNode (Queue) 實作一個簡單的 Stack 行為
     
     ListNode head;
     
@@ -31,7 +31,9 @@ public class A0225_ImplementStackUsingQueues {
     /** Removes the element on top of the stack and returns that element. */
     public int pop() {
         int val = head.val;
+        ListNode tmp = head;
         head = head.next;
+        tmp.next = null; // 讓記憶體可以被釋放
         return val;
     }
     

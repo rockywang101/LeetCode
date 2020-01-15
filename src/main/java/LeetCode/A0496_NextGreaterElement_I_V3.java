@@ -61,5 +61,4 @@ public class A0496_NextGreaterElement_I_V3 {
         
         return rtnNums;
     }
-    
 }

@@ -11,11 +11,7 @@ package LeetCode;
  * @author rocky
  */
 public class A1021_RemoveOutermostParentheses_V2 {
-    /* test case
-    "(()())(())"
-    "(()())(())(()(()))"
-    "()()"
-    */
+	
     public String removeOuterParentheses(String S) {
      
         StringBuilder sb = new StringBuilder();

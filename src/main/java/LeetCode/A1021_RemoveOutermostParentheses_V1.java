@@ -8,12 +8,12 @@ import java.util.Stack;
  * Runtime: 5 ms, faster than 40.20% of Java online submissions for Remove Outermost Parentheses.
  * Memory Usage: 37.9 MB, less than 15.58% of Java online submissions for Remove Outermost Parentheses.
  * 
+ * "()(AAA)()" will get "AAA", but Expected is "", i don't understand why is ""
+ * 
  * @author rocky
  */
 public class A1021_RemoveOutermostParentheses_V1 {
     
-    // "()(AAA)()" will get "AAA", but Expected is "", i don't understand why is ""
-
     public String removeOuterParentheses(String S) {
      
         StringBuilder sb = new StringBuilder();

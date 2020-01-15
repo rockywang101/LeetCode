@@ -5,12 +5,15 @@ import java.util.List;
 
 /**
  * https://leetcode.com/problems/sum-root-to-leaf-numbers/
+ * 
+ * 這個版本沒有想到可以在 visitNode 的時候就順便得到數字並且加總起來
+ * 在 V2 重新再實作
  *  
  * Runtime: 1 ms, faster than 26.34% of Java online submissions for Sum Root to Leaf Numbers.
  * Memory Usage: 36.4 MB, less than 100.00% of Java online submissions for Sum Root to Leaf Numbers.
  * @author rocky
  */
-public class A0129_SumRootToLeafNumbers {
+public class A0129_SumRootToLeafNumbers_V1 {
     
     public int sumNumbers(TreeNode root) {
     
@@ -45,9 +48,8 @@ public class A0129_SumRootToLeafNumbers {
         path.removeLast();
     }
     
-    
     private int pathToInt(LinkedList<Integer> path) {
-        
+    	
         int num = 0;
         int i = 0;
         while (path.size() != 0) {
@@ -58,19 +60,5 @@ public class A0129_SumRootToLeafNumbers {
             i++;
         }
         return num;
-    }
-    
-    
-    public static void main(String[] args) {
-        
-        TreeNode root = new TreeNode(1);
-        TreeNode left = new TreeNode(2);
-        TreeNode right = new TreeNode(3);
-        
-        root.left = left;
-        root.right = right;
-        
-        int num = new A0129_SumRootToLeafNumbers().sumNumbers(root);
-        System.out.println(num);
     }
 }

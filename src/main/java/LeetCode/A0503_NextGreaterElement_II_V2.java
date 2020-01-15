@@ -46,18 +46,4 @@ public class A0503_NextGreaterElement_II_V2 {
         
         return rtnNums;
     }
-    
-    
-    public static void main(String[] args) {
-        
-        int[] nums = new int[] {2,7,8,4,1,3,6,5};
-        nums = new int[] {1,2,1};
-        nums = new int[] {1,1,1,1};
-        
-        int[] arr = new A0503_NextGreaterElement_II_V2().nextGreaterElements(nums);
-        for (int i : arr)
-            System.out.print(i + "  ");
-    }
-    
-    
 }

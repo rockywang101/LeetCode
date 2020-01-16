@@ -1,15 +1,24 @@
 package LeetCode;
 
+/** 
+ * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+ * 
+ * Runtime: 4 ms, faster than 14.24% of Java online submissions for Two Sum II - Input array is sorted.
+ * Memory Usage: 38.2 MB, less than 88.81% of Java online submissions for Two Sum II - Input array is sorted.
+ * 
+ * 因為有寫一版先找出最後一個比較小的敗的版本，但過不了這個 unit test，先改這版先能過，但效能很差
+ * [-3,3,4,90] 
+ * 0
+ * @author rocky
+ */
 public class A0167_TwoSumII_InputArrayIsSorted {
     
     public int[] twoSum(int[] nums, int target) {
      
-        int lastIndex = findLastSmallerIndex(nums, target);
-        
-        for (int i=0; i<lastIndex; i++) {
+        for (int i=0; i<nums.length; i++) {
             
             int start = i + 1;
-            int end = lastIndex;
+            int end = nums.length - 1;
             int diff = target - nums[i];
 
             while (start <= end) {
@@ -30,31 +39,6 @@ public class A0167_TwoSumII_InputArrayIsSorted {
         return null;
     }
     
-    private int findLastSmallerIndex(int[] nums, int target) {
-        
-        int start = 0;
-        int end = nums.length - 1;
-        
-        while (start <= end) {
-            int middle = (start + end) / 2;
-            
-            // 太小，繼續往後找
-            if (nums[middle] < target) {
-                
-                if (middle+1 < nums.length && nums[middle+1] > target)
-                    return middle;
-                start = middle + 1;
-            }
-            // 太大，前回找
-            else {
-                if (middle-1 >= 0 && nums[middle-1] < target)
-                    return middle-1;
-                end = middle - 1;
-            }
-        }
-        
-        return nums.length - 1;
-    }
     
     public static void main(String[] args) {
         int[] nums = new int[] {-3,3,4,90};

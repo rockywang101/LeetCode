@@ -3,7 +3,10 @@ package LeetCode;
 /**
  * https://leetcode.com/problems/invert-binary-tree/
  * 
- * 不會 work 的 recursive 版本
+ * recursive version by myself
+ * 
+ * Runtime: 0 ms, faster than 100.00% of Java online submissions for Invert Binary Tree.
+ * Memory Usage: 40.1 MB, less than 5.10% of Java online submissions for Invert Binary Tree.
  * 
  * @author rocky
  */
@@ -20,13 +23,12 @@ public class A0226_InvertBinaryTree_V3 {
     }
     
     private void invert(TreeNode node) {
-        
         // 左邊的小孩還有小孩的話
         if (node.left != null && (node.left.left != null || node.left.right != null))
             invert(node.left);
         // 右邊的小孩還有小孩的話
-        if (node.right != null && (node.right.left != null || node.left.right != null))
-            invert(node.left);
+        if (node.right != null && (node.right.left != null || node.right.right != null))
+            invert(node.right);
 
         // 交換
         TreeNode tmp = node.left;

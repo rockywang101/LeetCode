@@ -3,28 +3,19 @@ package LeetCode;
 /**
  * https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
  * 
+ * Runtime: 2 ms, faster than 7.60% of Java online submissions for Convert Sorted Array to Binary Search Tree.
+ * Memory Usage: 47.6 MB, less than 5.16% of Java online submissions for Convert Sorted Array to Binary Search Tree.
+ * 
  * @author rocky
  */
-public class A0108_ConvertSortedArrayToBinarySearchTree {
+public class A0108_ConvertSortedArrayToBinarySearchTree_V1 {
     
     public TreeNode sortedArrayToBST(int[] nums) {
         
         if (nums.length == 0)
             return null;
         
-        if (nums.length == 1)
-            return new TreeNode(nums[0]);
-        
-        if (nums.length <= 3)
-            return composeTreeNode(nums, 0, nums.length-1, false); // false 往右發展，其實都可以
-        
-        int middle = nums.length / 2;
-        TreeNode root = new TreeNode(nums[middle]);
-        
-        root.left = composeTreeNode(nums, 0, middle-1, true);
-        root.right = composeTreeNode(nums, middle+1, nums.length-1, false);
-        
-        return root;
+        return composeTreeNode(nums, 0, nums.length-1, false); // false 往右發展，其實都可以
     }
     
     private TreeNode composeTreeNode(int[] nums, int start, int end, boolean isLeft) {
@@ -52,16 +43,11 @@ public class A0108_ConvertSortedArrayToBinarySearchTree {
             return node;
         }
         
-        int middle = length / 2;
+        int middle = start + length / 2;
         TreeNode node = new TreeNode(nums[middle]);
         node.left = composeTreeNode(nums, start, middle-1, true);
         node.right = composeTreeNode(nums, middle+1, end, false);
         
         return node;
-    }
-    
-    public static void main(String[] args) {
-        
-        new A0108_ConvertSortedArrayToBinarySearchTree().sortedArrayToBST(new int[] {1,2,3,4,5,6,7,8,9});
     }
 }    

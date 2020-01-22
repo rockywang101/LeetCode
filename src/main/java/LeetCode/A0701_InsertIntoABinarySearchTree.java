@@ -3,6 +3,8 @@ package LeetCode;
 /**
  * https://leetcode.com/problems/insert-into-a-binary-search-tree/
  * 
+ * recursive version
+ * 
  * Runtime: 0 ms, faster than 100.00% of Java online submissions for Insert into a Binary Search Tree.
  * Memory Usage: 57.5 MB, less than 5.17% of Java online submissions for Insert into a Binary Search Tree.
  * 

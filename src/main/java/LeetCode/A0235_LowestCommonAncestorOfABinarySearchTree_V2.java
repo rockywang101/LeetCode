@@ -3,6 +3,8 @@ package LeetCode;
 /**
  * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
  * 
+ * recursive version
+ * 
  * this question commit time is very unstable, sometimes is fast, and sometimes is slow
  * 
  * Runtime: 11 ms, faster than 5.61% of Java online submissions for Lowest Common Ancestor of a Binary Search Tree.

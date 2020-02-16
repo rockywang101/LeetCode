@@ -15,13 +15,14 @@ public class A0092_ReverseLinkedList_II {
     	ListNode curr = head;
     	ListNode prev = null;
     	int i = 1;
+    	// 先把 curr 移到第 m 個 node (prev 是前一個)
     	while (i < m) {
     		prev = curr;
     		curr = curr.next;
     		i++;
     	}
     	
-    	ListNode first = curr;
+    	ListNode first = curr; // 要開始反轉的第一個 node
     	ListNode next = curr.next;
     	while (i < n) {
     		ListNode tmp = next;
@@ -31,7 +32,7 @@ public class A0092_ReverseLinkedList_II {
     		i++;
     	}
     	
-    	first.next = next;
+    	first.next = next; // 1 -> "2 -> 3 -> 4" -> 5 的話，first 就是把 2，指向 5
     	if (m == 1)
     		head = curr;
     	else

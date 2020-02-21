@@ -10,7 +10,7 @@ package LeetCode;
  * 
  * @author rocky
  */
-public class A0701_InsertIntoABinarySearchTree {
+public class A0701_InsertIntoABinarySearchTree_V1 {
     
     public TreeNode insertIntoBST(TreeNode root, int val) {
      

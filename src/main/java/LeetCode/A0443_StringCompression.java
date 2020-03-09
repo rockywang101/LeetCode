@@ -58,7 +58,7 @@ public class A0443_StringCompression {
                         chars[replaceIndex++] = (char) (count + 48); // notice if this translate is OK
                         count = -1;
                     }
-                }    
+                }
             }
             
             i++;            
@@ -72,7 +72,7 @@ public class A0443_StringCompression {
     
     public static void main(String[] args) {
 
-        char[] chars = new char[] {'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a'};
+        char[] chars = new char[] {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
         
         int cnt = new A0443_StringCompression().compress(chars);
         
